@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Playlist Simulation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .playlist-header {
+            background: linear-gradient(135deg, rgba(30, 215, 96, 1) 0%, rgba(0, 148, 50, 1) 100%);
+        }
+        .control-button {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .control-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.375rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header class="bg-gray-800 p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <button class="mr-3 text-white"><i class="fas fa-arrow-left"></i></button>
+            <button class="text-white"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <button class="bg-white text-black px-4 py-2 rounded-full">Descubrir Premium</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+        <!-- Playlist Header -->
+        <div class="playlist-header contenedor p-8 rounded-lg">
+            <div class="flex items-center space-x-6">
+                <a href="pagina.html">
+                    <img src="https://i.blogs.es/b2cd16/personalizar-portadas-spotify-4/1366_2000.jpg" alt="Playlist Image" class="imagen">
+                </a>
+                <div>
+                    <p class="text-sm uppercase">Lista pública</p>
+                    <h1 class="text-5xl font-bold">Dess sin T3</h1>
+                    <p class="mt-2">aperezcorti · 1796 me gusta · 67 canciones, 3 h 36 min</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Controls -->
+        <div class="bg-gray-800 p-4 rounded-lg mt-4 flex items-center space-x-4">
+            <button class="bg-green-500 control-button rounded-full text-white hover:bg-green-600"><i class="fas fa-play"></i></button>
+            <button class="control-button text-white"><i class="fas fa-random"></i></button>
+            <button class="control-button text-white"><i class="fas fa-check"></i></button>
+            <button class="control-button text-white"><i class="fas fa-arrow-down"></i></button>
+            <button class="control-button text-white"><i class="fas fa-ellipsis-h"></i></button>
+        </div>
+
+        <!-- Song List -->
+        <div class="bg-gray-800 p-4 rounded-lg mt-4">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="border-b border-gray-700">
+                        <th class="py-2">#</th>
+                        <th class="py-2">Título</th>
+                        <th class="py-2">Álbum</th>
+                        <th class="py-2">Fecha en la que se añadió</th>
+                        <th class="py-2">Duración</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-2">1</td>
+                        <td class="py-2 flex items-center space-x-3">
+                            <img src="https://via.placeholder.com/50.webp" alt="Song Image" class="w-10 h-10">
+                            <span>After Dark</span>
+                        </td>
+                        <td class="py-2">Mr.Kitty</td>
+                        <td class="py-2">23 feb 2024</td>
+                        <td class="py-2">4:19</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-2">2</td>
+                        <td class="py-2 flex items-center space-x-3">
+                            <img src="https://via.placeholder.com/50.webp" alt="Song Image" class="w-10 h-10">
+                            <span>What's Good</span>
+                        </td>
+                        <td class="py-2">SR, Poundz</td>
+                        <td class="py-2">23 feb 2024</td>
+                        <td class="py-2">2:57</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-2">3</td>
+                        <td class="py-2 flex items-center space-x-3">
+                            <img src="https://via.placeholder.com/50.webp" alt="Song Image" class="w-10 h-10">
+                            <span>Sava x Fumez The Engineer - Plugged In</span>
+                        </td>
+                        <td class="py-2">Fumez The Engineer, Sava, OTP</td>
+                        <td class="py-2">23 feb 2024</td>
+                        <td class="py-2">2:38</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-2">4</td>
+                        <td class="py-2 flex items-center space-x-3">
+                            <img src="https://via.placeholder.com/50.webp" alt="Song Image" class="w-10 h-10">
+                            <span>Pisces</span>
+                        </td>
+                        <td class="py-2">Russ Millions, Krept & Konan</td>
+                        <td class="py-2">23 feb 2024</td>
+                        <td class="py-2">2:40</td>
+                    </tr>
+                    <tr class="hover:bg-gray-700">
+                        <td class="py-2">5</td>
+                        <td class="py-2 flex items-center space-x-3">
+                            <img src="https://via.placeholder.com/50.webp" alt="Song Image" class="w-10 h-10">
+                            <span>Local (feat. Headie One & Bandokay)</span>
+                        </td>
+                        <td class="py-2">Abra Cadabra, Headie One, Bandokay</td>
+                        <td class="py-2">23 feb 2024</td>
+                        <td class="py-2">3:47</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
+

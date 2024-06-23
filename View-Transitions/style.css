@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@view-transition {
+  navigation: auto; /* enabled! */
+}
+
+::view-transition-old(root), /*Transiccion de salida*/
+  ::view-transition-new(root) /*Transiccion de entrada*/ {
+  animation-duration: 0.5s;
+}
+
+::view-transition-old(imagen) { /*   */
+  animation-name: SclaneOut;
+}
+
+::view-transition-new(imagen) {
+  animation-name: SclaneIn;
+}
+
+@keyframes SclaneIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes SclaneOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.imagen {
+view-transition-name: imagen;
+  padding: 5px;
+  margin-left: 5px;
+  max-width: 200px;
+
+}
+
+.contenedor .imagen{
+    background-color: gray;
+    padding: 5px;
+}
+
+/*! Para que tambien el header tenga animacion*/
+.contenedor{
+    view-transition-name: contenedor;
+}
+
+.informacion{
+    margin-left: 5px;
+    margin-top: 100px;
+}
+
